@@ -31,7 +31,7 @@ public class FindImpl implements FindAble {
         List<Movie> movies = new LinkedList<>();
         for (Movie movie : DataBase.movies) {
             for (Actor actor : movie.actors) {
-                if (actorName.toLowerCase().contains(actor.getFullName().toLowerCase())) {
+                if (actor.getFullName().toLowerCase().contains(actorName.toLowerCase())) {
                     movies.add(movie);
                 }
             }
@@ -65,7 +65,7 @@ public class FindImpl implements FindAble {
     public List<Movie> findMovieByGenre(Genre genre) {
         List<Movie> movies = new LinkedList<>();
         for (Movie movie : DataBase.movies) {
-            if (genre.equals(movie.getGenre())) {
+            if (movie.getGenre().equals(genre)) {
                 movies.add(movie);
             }
         }
@@ -77,7 +77,7 @@ public class FindImpl implements FindAble {
         List<Movie> movies = new LinkedList<>();
         for (Movie movie : DataBase.movies) {
             for (Actor actor : movie.actors) {
-                if (role.toLowerCase().contains(actor.getRole().toLowerCase())) {
+                if (actor.getFullName().toLowerCase().contains(role.toLowerCase())) {
                     movies.add(movie);
                 }
             }

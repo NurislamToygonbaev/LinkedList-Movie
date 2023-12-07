@@ -19,97 +19,63 @@ public class Main {
             try {
                 menu();
                 switch (scanForNumber.nextInt()) {
-                    case 0 -> {
-                        break LOOP;
-                    }
+                    case 0 -> {break LOOP;}
                     case 1 -> System.out.println(find.getAllMovies());
                     case 2 -> {
                         System.out.print("enter name: ");
                         String name = scanner.nextLine();
-                        if (find.findMovieByNameOrPartName(name) == null) {
-                            System.err.println("There is no such movie");
-                        } else {
-                            System.out.println(find.findMovieByNameOrPartName(name));
-                        }
+                        if (find.findMovieByNameOrPartName(name) == null) System.err.println("Nothing was found");
+                        else System.out.println(find.findMovieByNameOrPartName(name));
                     }
                     case 3 -> {
                         System.out.print("enter actor name: ");
                         String actorName = scanner.nextLine();
-                        if (find.findMovieByActorName(actorName) == null) {
-                            System.err.println("There is no such movie");
-                        } else {
-                            System.out.println(find.findMovieByActorName(actorName));
-                        }
+                        if (find.findMovieByActorName(actorName) == null) System.err.println("Nothing was found");
+                        else System.out.println(find.findMovieByActorName(actorName));
                     }
                     case 4 -> {
                         System.out.print("enter year movie: ");
                         int year = scanForNumber.nextInt();
-                        if (find.findMovieByYear(year) == null) {
-                            System.err.println("There is no such movie");
-                        } else {
-                            System.out.println(find.findMovieByYear(year));
-                        }
+                        if (find.findMovieByYear(year) == null) System.err.println("Nothing was found");
+                        else System.out.println(find.findMovieByYear(year));
                     }
                     case 5 -> {
                         System.out.print("enter producer name: ");
                         String producerName = scanner.nextLine();
-                        if (find.findMovieByProducer(producerName) == null) {
-                            System.err.println("There is no such movie");
-                        } else {
-                            System.out.println(find.findMovieByProducer(producerName));
-                        }
+                        if (find.findMovieByProducer(producerName) == null) System.err.println("Nothing was found");
+                        else System.out.println(find.findMovieByProducer(producerName));
                     }
                     case 6 -> {
                         System.out.print("enter genre movie (COMEDY/HORROR/FANTASY): ");
                         String genre = scanner.nextLine();
                         if (genre.toLowerCase().contains("comedy")) {
-                            if (find.findMovieByGenre(Genre.COMEDY) == null) {
-                                System.err.println("There is no such movie");
-                            } else {
-                                System.out.println(find.findMovieByGenre(Genre.COMEDY));
-                            }
+                            if (find.findMovieByGenre(Genre.COMEDY) == null) System.err.println("Nothing was found");
+                            else System.out.println(find.findMovieByGenre(Genre.COMEDY));
                         } else if (genre.toLowerCase().contains("horror")) {
-                            if (find.findMovieByGenre(Genre.HORROR) == null) {
-                                System.err.println("There is no such movie");
-                            } else {
-                                System.out.println(find.findMovieByGenre(Genre.HORROR));
-                            }
+                            if (find.findMovieByGenre(Genre.HORROR) == null) System.err.println("Nothing was found");
+                            else System.out.println(find.findMovieByGenre(Genre.HORROR));
                         } else if (genre.toLowerCase().contains("fantasy")) {
-                            if (find.findMovieByGenre(Genre.FANTASY) == null) {
-                                System.err.println("There is no such movie");
-                            } else {
-                                System.out.println(find.findMovieByGenre(Genre.FANTASY));
-                            }
-                        } else {
-                            System.err.println("There is no such movie");
+                            if (find.findMovieByGenre(Genre.FANTASY) == null) System.err.println("Nothing was found");
+                            else System.out.println(find.findMovieByGenre(Genre.FANTASY));
                         }
                     }
                     case 7 -> {
                         System.out.print("enter actor's role: ");
                         String actorRole = scanner.nextLine();
-                        if (find.findMovieByRole(actorRole) == null) {
-                            System.err.println("There is no such movie");
-                        } else {
-                            System.out.println(find.findMovieByRole(actorRole));
-                        }
+                        if (find.findMovieByRole(actorRole) == null) System.err.println("Nothing was found");
+                        else System.out.println(find.findMovieByRole(actorRole));
                     }
                     case 8 -> {
                         System.out.print("enter asc or desc: ");
                         String ascOrDesc = scanner.nextLine();
-                        if (sort.sortByMovieName(ascOrDesc) == null) {
-                            System.err.println("wrong command");
-                        } else {
-                            System.out.println(sort.sortByMovieName(ascOrDesc));
-                        }
+                        if (sort.sortByMovieName(ascOrDesc) == null) System.err.println("wrong command");
+                        else System.out.println(sort.sortByMovieName(ascOrDesc));
                     }
                     case 9 -> {
                         System.out.print("enter asc or desc: ");
                         String year = scanner.nextLine();
-                        if (sort.sortByYear(year) == null) {
-                            System.err.println("wrong command");
-                        } else {
-                            System.out.println(sort.sortByYear(year));
-                        }
+                        if (sort.sortByYear(year) == null) System.err.println("wrong command");
+                        else System.out.println(sort.sortByYear(year));
                     }
                     case 10 -> System.out.println(sort.sortByProducer());
                     default -> System.err.println("write correct choice!!!");
