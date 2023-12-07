@@ -54,7 +54,7 @@ public class FindImpl implements FindAble {
     public List<Movie> findMovieByProducer(String producerName) {
         List<Movie> movies = new LinkedList<>();
         for (Movie movie : DataBase.movies) {
-            if (producerName.toLowerCase().contains(movie.producer.getFirstName().toLowerCase())) {
+            if (movie.getProducer().getFirstName().toLowerCase().contains(producerName.toLowerCase())){
                 movies.add(movie);
             }
         }

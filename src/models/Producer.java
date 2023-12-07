@@ -41,7 +41,7 @@ public class Producer {
     @Override
     public String toString() {
         return "Producer: {" +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' + "}\n\n";
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' + '}' + "\n\n";
     }
 }
