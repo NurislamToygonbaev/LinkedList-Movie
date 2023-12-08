@@ -44,6 +44,6 @@ public class DataBase {
    public static List<Movie> movies = new LinkedList<>(Arrays.asList(
             new Movie(1, "spusk", 2009, Genre.HORROR, producer1, actors),
             new Movie(2, "mstiteli", 2017, Genre.FANTASY, producer2, actors2),
-            new Movie(3, "vpityk", 2013, Genre.COMEDY, producer3, actors3)
+            new Movie(3, "vprityk", 2013, Genre.COMEDY, producer3, actors3)
     ));
 }

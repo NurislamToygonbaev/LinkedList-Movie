@@ -23,7 +23,8 @@ public class SortImpl implements SortAble{
 
     @Override
     public List<Movie> sortByYear(String ascOrDesc) {
-        Comparator<Movie> movieYear = Comparator.comparing(Movie::getYear);
+        Comparator<Movie> movieYear = Comparator.comparing(Movie::getYear
+        );
 
         if (ascOrDesc.toLowerCase().contains("desc")) {
             DataBase.movies.sort(movieYear.reversed());
