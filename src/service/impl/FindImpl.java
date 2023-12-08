@@ -77,7 +77,7 @@ public class FindImpl implements FindAble {
         List<Movie> movies = new LinkedList<>();
         for (Movie movie : DataBase.movies) {
             for (Actor actor : movie.actors) {
-                if (actor.getFullName().toLowerCase().contains(role.toLowerCase())) {
+                if (actor.getRole().toLowerCase().contains(role.toLowerCase())) {
                     movies.add(movie);
                 }
             }
